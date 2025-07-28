@@ -1,0 +1,198 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: 'Segoe UI', sans-serif;
+  background: rgb(0, 0, 0);
+  color: #ffffff;
+}
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  background: transparent;
+  background-color: #000000;
+}
+.logo img {
+  height: 40px;
+  display: flex;
+  background-color: black;
+  align-items: center;
+  justify-content: center;
+  align-content: center;
+}
+#authBtn {
+  padding: 8px 16px;
+  border: none;
+  background-color: #1a068b;
+  color: white;
+  border-radius: 5px;
+  cursor: pointer;
+  border-radius: 17px;
+}
+nav {
+  background: transparent;
+  backdrop-filter: blur(5px);
+  padding: 10px 0;
+  background-color: #000000;
+  color: #ffffff;
+}
+nav ul {
+  display: flex;
+  justify-content: space-evenly;
+  list-style: none;
+}
+nav ul li {
+  position: relative;
+  padding: 10px 15px;
+  cursor: pointer;
+  font-weight: bold;
+}
+nav ul li::after {
+  content: "";
+  display: block;
+  height: 2px;
+  width: 0%;
+  background: #ffffff;
+  transition: width 0.7s;
+}
+nav ul li:hover::after {
+  width: 100%;
+}
+.dropdown {
+  display: none;
+  position: absolute;
+  top: 100%;
+  background: rgb(36, 30, 53);
+  border-radius: 5px;
+  box-shadow: 0 4px 6px rgba(180, 5, 5, 0.1);
+  min-width: 120px;
+  z-index: 10;
+  color: white;
+  
+}
+nav ul li:hover .dropdown {
+  display: block;
+  
+}
+.dropdown li {
+  padding: 10px;
+  white-space: nowrap;
+  color: rgb(255, 255, 255);
+  text-decoration: none;
+}
+.dropdown li:hover {
+  background: #0d1c30;
+  text-decoration: none;
+  
+}
+
+.search-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 30px 0;
+}
+.search-toggle img {
+  height: 80px;
+  cursor: pointer;
+  display: flex;
+  border-radius: 3px;
+  border-color: #1a068b;
+  background: transparent;
+}
+.search-bar {
+  margin-top: 10px;
+  display: flex;
+  flex-direction: row;
+  gap: 19px;
+}
+.search-bar input {
+  padding: 10px;
+  width: 300px;
+  border: 4px solid #1a068b;
+  border-radius: 5px;
+}
+.search-bar button {
+  padding: 10px 15px;
+  background: #1a068b;
+  color: rgb(255, 255, 255);
+  border: none;
+  border-radius: 20px;
+  font-weight: bolder;
+}
+.desc {
+  text-align: center;
+  max-width: 500px;
+  margin-top: 20px;
+}
+
+.auth-form {
+  display: none;
+  position: fixed;
+  top: 50px;
+  right: 20px;
+  background:#ffffff;
+  border-radius: 10px;
+  box-shadow: 0 0 12px rgba(0,0,0,0.2);
+  padding: 20px;
+  z-index: 20;
+  width: 300px;
+}
+.close-auth {
+  width: 20px;
+  cursor: pointer;
+  float: right;
+}
+.tabs {
+  display: flex;
+  justify-content: space-around;
+  margin-bottom: 15px;
+}
+.tabs button {
+  background: none;
+  border: none;
+  font-weight: bold;
+  cursor: pointer;
+}
+.form-content {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.form-content.hidden {
+  display: none;
+}
+.form-content input {
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+.form-content button {
+  padding: 10px;
+  background: #0b5ed7;
+  color: white;
+  border: none;
+  border-radius: 5px;
+}
+
+footer {
+  text-align: center;
+  padding: 20px;
+  background: #222;
+  color: #fff;
+  margin-top: 50px;
+}
+
+@media screen and (max-width: 768px) {
+  nav ul {
+    flex-direction: column;
+    align-items: center;
+  }
+  .search-bar input {
+    width: 100%;
+  }
+}

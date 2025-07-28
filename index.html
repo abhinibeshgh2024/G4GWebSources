@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Scorecard Dashboard</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <!-- =================== TOP NAVIGATION =================== -->
+  <header id="topnav">
+    <button id="toggleSidebar" class="nav-button">☰</button>
+    
+    <!-- Centered Logo Image -->
+    <div id="logo-area">
+      <img src="G4G__1_-removebg-preview (1) (1) (1).png
+      " alt="My Logo" id="mainLogo" />
+    </div>
+
+    <!-- Dark Mode Toggle -->
+    <div class="top-controls">
+      <label class="theme-label">
+        <input type="checkbox" id="themeToggle" />
+        🌙
+      </label>
+    </div>
+  </header>
+
+  <!-- =================== SIDEBAR =================== -->
+  <aside id="sidebar">
+    <h2>Semesters</h2>
+    <div id="semesterList"></div>
+
+    <div class="sidebar-actions">
+      <button id="printBtn">🖨️ Print</button>
+      <button id="exportBtn">📄 Export PDF</button>
+      <button id="resetBtn">🔁 Reset</button>
+      <button id="collapseBtn">⬇️ Collapse All</button>
+    </div>
+
+    <canvas id="cgpaChart" width="220" height="200"></canvas>
+    <p id="storedSemestersCount"></p>
+  </aside>
+
+  <!-- =================== MAIN CONTENT =================== -->
+  <main id="main">
+    <section id="input-section" class="center-container">
+      <h3>Add / Edit Semester</h3>
+      <form id="input-form">
+        <div class="input-line">
+          <input type="text" id="semester" placeholder="Semester (e.g. Sem 1)" required />
+        </div>
+        <div class="input-line">
+          <input type="number" id="subjectCount" placeholder="Number of Subjects" required />
+        </div>
+        <div class="input-line">
+          <input type="text" id="cgpa" placeholder="SGPA" required />
+          <span id="percentageDisplay" style="margin-left: 10px;"></span>
+        </div>
+        <div id="dynamicSubjects"></div>
+        <div class="input-line">
+          <button type="submit">➕ Add/Update</button>
+          <button type="button" id="loadBtn">🔄 Load</button>
+          <button type="button" id="clearBtn">❌ Clear Last</button>
+        </div>
+      </form>
+    </section>
+
+    <!-- ============== Output Display ============== -->
+    <section id="output-section" class="center-container">
+      <h3>Semester Results</h3>
+      <div id="scoreDisplay" class="output-container"></div>
+    </section>
+  </main>
+
+  <!-- Script -->
+  <script src="script.js"></script>
+</body>
+</html>

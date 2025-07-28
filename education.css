@@ -1,0 +1,16 @@
+.caption{
+    text-align: center;
+    font-family: verdana;
+    font-weight: 500;
+    color: gold;
+    background-color: black;
+    font-weight: 700;
+    font-size: x-large;
+    padding: 10PX;
+    
+}
+hr{
+    font-weight: 700;
+    color: blue;
+
+}

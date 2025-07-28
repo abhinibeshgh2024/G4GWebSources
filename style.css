@@ -1,0 +1,265 @@
+/* ===== RESET & BASE ===== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: 'Segoe UI', sans-serif;
+  background-color: #ffffff;
+  color: #202124;
+  transition: background 0.3s, color 0.3s;
+}
+body.dark {
+  background-color: #202124;
+  color: #e8eaed;
+}
+
+/* ===== TOP NAV ===== */
+#topnav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 56px;
+  background-color: rgb(121, 10, 10);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 20px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  z-index: 100;
+}
+body.dark #topnav {
+  background-color: #303134;
+}
+
+#mainLogo {
+  height: 40px;
+  width: auto;
+  display: block;
+  margin: auto;
+}
+
+.nav-button {
+  font-size: 22px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: #202124;
+}
+body.dark .nav-button {
+  color: #e8eaed;
+}
+
+/* ===== SIDEBAR ===== */
+#sidebar {
+  position: fixed;
+  top: 56px;
+  left: 0;
+  bottom: 0;
+  width: 240px;
+  background-color: white;
+  padding: 20px;
+  overflow-y: auto;
+  transition: transform 0.3s ease;
+  border-right: 1px solid #dadce0;
+}
+body.dark #sidebar {
+  background-color: #2c2f33;
+  border-color: #444;
+}
+#sidebar.hide {
+  transform: translateX(-100%);
+}
+
+#sidebar h2 {
+  font-size: 1.2rem;
+  margin-bottom: 10px;
+}
+.semester-btn {
+  display: block;
+  width: 100%;
+  padding: 10px;
+  background: #f8f9fa;
+  border: 1px solid #dadce0;
+  margin-bottom: 8px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: bold;
+  text-align: left;
+}
+.semester-btn:hover {
+  background: #e8eaed;
+}
+body.dark .semester-btn {
+  background-color: #3c4043;
+  color: white;
+  border-color: #5f6368;
+}
+
+.sidebar-actions button {
+  display: block;
+  width: 100%;
+  margin: 6px 0;
+  padding: 10px;
+  font-weight: bold;
+  border-radius: 6px;
+  border: none;
+  cursor: pointer;
+}
+#printBtn { background: #4285F4; color: white; }
+#exportBtn { background: #DB4437; color: white; }
+#resetBtn { background: #F4B400; color: white; }
+#collapseBtn { background: #0F9D58; color: white; }
+
+/* ===== MAIN CONTENT ===== */
+#main {
+  margin-left: 240px;
+  margin-top: 56px;
+  padding: 30px;
+  transition: margin-left 0.3s;
+}
+body.hide-sidebar #main {
+  margin-left: 0;
+}
+
+.center-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* ===== FORM SECTION ===== */
+#input-form {
+  background: white;
+  padding: 20px;
+  width: 100%;
+  max-width: 500px;
+  border-radius: 10px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+body.dark #input-form {
+  background-color: #3c4043;
+}
+.input-line {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-bottom: 15px;
+}
+.input-line input {
+  flex: 1;
+  padding: 10px;
+  border: 1px solid #dadce0;
+  border-radius: 6px;
+  font-weight: bold;
+  transition: border-color 0.3s;
+}
+.input-line input:focus {
+  border-color: #4285F4;
+  outline: none;
+}
+body.dark .input-line input {
+  background-color: #5f6368;
+  color: white;
+  border-color: #888;
+}
+
+/* ===== BUTTONS ===== */
+button {
+  padding: 10px 16px;
+  font-weight: bold;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background 0.2s ease;
+}
+button:hover {
+  opacity: 0.9;
+}
+
+/* ===== OUTPUT DISPLAY ===== */
+.output-container {
+  margin-top: 30px;
+  width: 100%;
+  max-width: 900px;
+}
+.scorecard {
+  background-color: white;
+  border-radius: 12px;
+  padding: 20px;
+  margin-bottom: 25px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  transition: transform 0.3s;
+}
+body.dark .scorecard {
+  background-color: #3c4043;
+  color: white;
+}
+.scorecard h2 {
+  text-align: center;
+  margin-bottom: 15px;
+}
+.result-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 10px;
+}
+.result-table th,
+.result-table td {
+  border: 1px solid #dadce0;
+  padding: 10px;
+  text-align: center;
+  font-weight: bold;
+}
+.result-table th {
+  background-color: #f1f3f4;
+}
+.result-table td:first-child {
+  text-align: left;
+}
+body.dark .result-table th {
+  background-color: #5f6368;
+}
+
+/* ===== CHART ===== */
+#cgpaChart {
+  margin-top: 30px;
+  background: #e8eaed;
+  border-radius: 8px;
+}
+body.dark #cgpaChart {
+  background-color: #5f6368;
+}
+
+/* ===== RESPONSIVE ===== */
+@media screen and (max-width: 768px) {
+  #sidebar {
+    width: 200px;
+  }
+  #main {
+    margin-left: 0;
+  }
+  body.hide-sidebar #main {
+    margin-left: 0;
+  }
+  .input-line {
+    flex-direction: column;
+  }
+}
+
+/* ===== PRINT ===== */
+@media print {
+  #topnav, #sidebar, .sidebar-actions, #toggleSidebar {
+    display: none !important;
+  }
+  #main {
+    margin: 0;
+    padding: 0;
+  }
+  .scorecard {
+    box-shadow: none;
+    border: 1px solid black;
+  }
+}

@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>G4G Browser</title>
+  <link rel="stylesheet" href="stylehome.css"/>
+</head>
+<body>
+  <header>
+    <div class="logo">
+      <img src="G4G-removebg-preview (1) (2).png" style="align-items: center;justify-content: center" alt="G4G Logo"/>
+    </div>
+    <button id="authBtn">SignUp / Login</button>
+  </header>
+
+  <nav>
+    <ul>
+      <li>
+        Webb
+        <ul class="dropdown">
+          <li><a href="" style="text-decoration: none;color: white"> AI Resume Builder</a></li>
+          <li><a href="" style="text-decoration: none;color: white">Expense Tracker</a></li>
+        </ul>
+      </li>
+      <li>
+        News
+        <ul class="dropdown">
+          <li>India</li>
+          <li>International</li>
+          <li>United Nations</li>
+        </ul>
+      </li>
+      <li>
+        Code
+        <ul class="dropdown">
+          <li>JS Editor</li>
+          <li>C Editor</li>
+          <li>HTML Editor</li>
+          <li>Python Editor</li>
+        </ul>
+      </li>
+      <li>
+        Eduverse
+        <ul class="dropdown">
+          <li><a href="infstr.html" style="color: white;text-decoration: none">Galaxy</a></li>
+          <li>A.R.D. by G4G</li>
+        </ul>
+      </li>
+      <li>
+        Sports and Fashion
+        <ul class="dropdown">
+          <li>Help</li>
+          <li>Support</li>
+        </ul>
+      </li>
+      <li>
+        Social
+        <ul class="dropdown">
+          <li>Blog</li>
+          <li>Updates</li>
+        </ul>
+      </li>
+      <li>
+        Contact
+        <ul class="dropdown">
+          <li>Contact</li>
+          <li>About</li>
+        </ul>
+      </li>
+    </ul>
+  </nav>
+
+  <div class="search-wrapper">
+    <button class="search-toggle">
+      <img src="mjkl.png"/>
+    </button>
+    <form action="https://www.google.com/search" method="GET" class="search-bar">
+      <input type="text" name="q" placeholder="Search Google..."/>
+      <button type="submit">Go</button>
+    </form>
+    <p class="desc">
+      <strong>G4G Browser:</strong> Your personalized browsing hub offering powerful AI tools, real-time career boosters, code simulators, and productivity apps—optimized for learners and developers.
+    </p>
+  </div>
+
+  <div class="auth-form">
+    <img src="download.png" alt="Cancel" class="close-auth"/>
+    <div class="tabs">
+      <button id="showSignup">Sign Up</button>
+      <button id="showLogin">Login</button>
+    </div>
+    <div class="form-content" id="signupForm">
+      <input type="text" placeholder="Name"/>
+      <input type="email" placeholder="Email"/>
+      <input type="password" placeholder="Password"/>
+      <button>Sign Up</button>
+    </div>
+    <div class="form-content hidden" id="loginForm">
+      <input type="email" placeholder="Email"/>
+      <input type="password" placeholder="Password"/>
+      <a href="#">Forgot password?</a>
+      <button>Login</button>
+    </div>
+  </div>
+
+  <footer>
+    <p>&copy; 2025 G4G Browser. All rights reserved.</p>
+  </footer>
+
+  <script src="scripthome.js"></script>
+</body>
+</html>
