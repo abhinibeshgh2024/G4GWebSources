@@ -1,4 +1,4 @@
-# Abhipsa Web Project
+# G4G Web Browser
 
 This is my personal web project hosted on GitHub.  
 Features include responsive design, clean UI, and more.
